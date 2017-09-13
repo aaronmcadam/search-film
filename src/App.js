@@ -22,7 +22,22 @@ injectGlobal`
 const AppWrapper = styled.div``;
 const Header = styled.div`padding-left: 1rem;`;
 const AppName = styled.h1`font-size: 3rem;`;
-const Intro = styled.p`font-size: 24px;`;
+const Intro = styled.p`font-size: 1.5rem;`;
+
+const SearchForm = styled.form`
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+`;
+const SearchInput = styled.input`
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin-right: 10px;
+`;
+const SubmitButton = styled.button`
+  font-size: 1.5rem;
+  padding: 10px;
+`;
 
 class App extends Component {
   render() {
@@ -32,6 +47,10 @@ class App extends Component {
           <AppName>SearchFilm</AppName>
           <Intro>Start typing to get started!</Intro>
         </Header>
+        <SearchForm>
+          <SearchInput type="text" placeholder="e.g. Blade Runner" />
+          <SubmitButton>Search</SubmitButton>
+        </SearchForm>
       </AppWrapper>
     );
   }
