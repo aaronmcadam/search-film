@@ -11,14 +11,14 @@ const Wrapper = styled.form`
 
 function SearchForm({ setInputRef, onSubmit }) {
   return (
-    <Wrapper data-role="search-form">
+    <Wrapper data-role="search-form" onSubmit={onSubmit}>
       <SearchInput
         data-role="search-input"
         type="text"
         placeholder="e.g. Blade Runner"
         innerRef={setInputRef}
       />
-      <SubmitButton onClick={onSubmit}>Search</SubmitButton>
+      <SubmitButton>Search</SubmitButton>
     </Wrapper>
   );
 }
