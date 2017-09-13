@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ResultHeading from './ResultHeading';
 import MovieListing from './MovieListing';
@@ -12,7 +13,12 @@ const Wrapper = styled.div`
   padding: 1rem;
 `;
 
-export default function Results({ movies }) {
+function Results({ movies }) {
+  // TODO: tell the user there no results instead
+  if (!movies.length) {
+    return null;
+  }
+
   return (
     <Wrapper data-role="results">
       <ResultHeading>Results</ResultHeading>
@@ -20,3 +26,20 @@ export default function Results({ movies }) {
     </Wrapper>
   );
 }
+
+Results.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      poster_path: PropTypes.string,
+      title: PropTypes.string,
+      overview: PropTypes.string,
+    })
+  ),
+};
+
+Results.defaultProps = {
+  movies: [],
+};
+
+export default Results;

@@ -6,10 +6,12 @@ describe('user searches for a film', () => {
       browser.url('/');
       const searchInput = $('[data-role="search-input"]');
       const searchForm = $('[data-role="search-form"]');
+      const results = $('[data-role="results"]');
 
       searchInput.setValue('Empire Records');
       searchForm.submitForm();
 
+      results.waitForExist(5000);
       const textContent = browser.getText('[data-role="results"]');
       expect(textContent).to.contain('Empire Records');
     });

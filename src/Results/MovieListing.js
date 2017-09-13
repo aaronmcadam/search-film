@@ -9,6 +9,10 @@ const Wrapper = styled.div`
 `;
 
 function MovieListing({ movies }) {
+  if (!movies.length) {
+    return <p>We couldn't find anything</p>;
+  }
+
   return (
     <Wrapper>
       {movies.map(movie => <Movie key={movie.id} {...movie} />)}
