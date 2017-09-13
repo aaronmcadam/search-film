@@ -19,15 +19,20 @@ injectGlobal`
   }
 `;
 
+const AppWrapper = styled.div``;
+const Header = styled.div`padding-left: 1rem;`;
+const AppName = styled.h1`font-size: 3rem;`;
+const Intro = styled.p`font-size: 24px;`;
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <h2>SearchFilm</h2>
-        </div>
-        <p>Search for a film!</p>
-      </div>
+      <AppWrapper>
+        <Header>
+          <AppName>SearchFilm</AppName>
+          <Intro>Start typing to get started!</Intro>
+        </Header>
+      </AppWrapper>
     );
   }
 }
