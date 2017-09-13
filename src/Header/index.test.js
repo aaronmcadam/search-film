@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SearchForm from './SearchForm';
+import Header from '.';
 
 const setup = () => {
-  const wrapper = shallow(<SearchForm />);
+  const wrapper = shallow(<Header />);
 
   return {
     wrapper,
