@@ -23,11 +23,20 @@ injectGlobal`
 const AppWrapper = styled.div``;
 
 class App extends Component {
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log('this.searchInput.value', this.searchInput.value);
+  };
   render() {
     return (
       <AppWrapper>
         <Header />
-        <SearchForm />
+        <SearchForm
+          setInputRef={input => {
+            this.searchInput = input;
+          }}
+          onSubmit={this.handleSubmit}
+        />
         <Results />
       </AppWrapper>
     );

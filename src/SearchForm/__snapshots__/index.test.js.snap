@@ -13,10 +13,13 @@ ShallowWrapper {
 >
     <styled.input
         data-role="search-input"
+        innerRef={[Function]}
         placeholder="e.g. Blade Runner"
         type="text"
     />
-    <styled.button>
+    <styled.button
+        onClick={[Function]}
+    >
         Search
     </styled.button>
 </styled.form>,
@@ -26,10 +29,13 @@ ShallowWrapper {
 >
       <styled.input
             data-role="search-input"
+            innerRef={[Function]}
             placeholder="e.g. Blade Runner"
             type="text"
       />
-      <styled.button>
+      <styled.button
+            onClick={[Function]}
+      >
             Search
       </styled.button>
 </styled.form>,
@@ -40,14 +46,20 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <SearchForm />,
+      "_currentElement": <SearchForm
+        onSubmit={[Function]}
+        setInputRef={[Function]}
+/>,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "props": Object {},
+        "props": Object {
+          "onSubmit": [Function],
+          "setInputRef": [Function],
+        },
         "refs": Object {},
         "state": null,
         "updater": Object {
@@ -73,10 +85,13 @@ ShallowWrapper {
 >
           <styled.input
                     data-role="search-input"
+                    innerRef={[Function]}
                     placeholder="e.g. Blade Runner"
                     type="text"
           />
-          <styled.button>
+          <styled.button
+                    onClick={[Function]}
+          >
                     Search
           </styled.button>
 </styled.form>,
@@ -86,10 +101,13 @@ ShallowWrapper {
 >
           <styled.input
                     data-role="search-input"
+                    innerRef={[Function]}
                     placeholder="e.g. Blade Runner"
                     type="text"
           />
-          <styled.button>
+          <styled.button
+                    onClick={[Function]}
+          >
                     Search
           </styled.button>
 </styled.form>,
@@ -104,6 +122,9 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <SearchForm />,
+  "unrendered": <SearchForm
+    onSubmit={[Function]}
+    setInputRef={[Function]}
+/>,
 }
 `;
