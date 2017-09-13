@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { injectGlobal } from 'styled-components';
 import { normalize } from 'polished';
+import SearchForm from './SearchForm/SearchForm';
 
 const honeyFlower = '#4A1479';
 const burningSand = '#D0806A';
@@ -23,21 +24,6 @@ const AppWrapper = styled.div``;
 const Header = styled.div`padding-left: 1rem;`;
 const AppName = styled.h1`font-size: 3rem;`;
 const Intro = styled.p`font-size: 1.5rem;`;
-
-const SearchForm = styled.form`
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-`;
-const SearchInput = styled.input`
-  border-radius: 10px;
-  font-size: 1.5rem;
-  margin-right: 10px;
-  padding: 10px;
-`;
-const SubmitButton = styled.button`
-  font-size: 1.5rem;
-  padding: 10px;
-`;
 
 const StyledResults = styled.div`
   background-color: ${bleuDeFrance};
@@ -120,14 +106,7 @@ class App extends Component {
           <AppName>SearchFilm</AppName>
           <Intro>Start typing to get started!</Intro>
         </Header>
-        <SearchForm data-role="search-form">
-          <SearchInput
-            data-role="search-input"
-            type="text"
-            placeholder="e.g. Blade Runner"
-          />
-          <SubmitButton>Search</SubmitButton>
-        </SearchForm>
+        <SearchForm />
         <Results />
       </AppWrapper>
     );
