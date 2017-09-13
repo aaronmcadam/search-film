@@ -9,27 +9,11 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <styled.div>
-    <Movie />
-    <Movie />
-    <Movie />
-    <Movie />
-    <Movie />
-    <Movie />
-    <Movie />
-    <Movie />
-    <Movie />
+    
 </styled.div>,
   "nodes": Array [
     <styled.div>
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
+      
 </styled.div>,
   ],
   "options": Object {},
@@ -38,14 +22,18 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <MovieListing />,
+      "_currentElement": <MovieListing
+        movies={Array []}
+/>,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "props": Object {},
+        "props": Object {
+          "movies": Array [],
+        },
         "refs": Object {},
         "state": null,
         "updater": Object {
@@ -67,27 +55,11 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <styled.div>
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
+          
 </styled.div>,
         "_debugID": 2,
         "_renderedOutput": <styled.div>
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
-          <Movie />
+          
 </styled.div>,
       },
       "_renderedNodeType": 1,
@@ -100,6 +72,8 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <MovieListing />,
+  "unrendered": <MovieListing
+    movies={Array []}
+/>,
 }
 `;

@@ -12,11 +12,11 @@ const Wrapper = styled.div`
   padding: 1rem;
 `;
 
-export default function Results() {
+export default function Results({ movies }) {
   return (
     <Wrapper data-role="results">
       <ResultHeading>Results</ResultHeading>
-      <MovieListing />
+      <MovieListing movies={movies} />
     </Wrapper>
   );
 }

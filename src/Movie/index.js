@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import getImagePath from '../utils/getImagePath';
 
 const Wrapper = styled.div`
   background-color: #fff;
@@ -26,10 +27,10 @@ const MovieOverview = styled.div``;
 export default function Movie({ poster_path, title, overview }) {
   return (
     <Wrapper>
-      <MovieImage src="http://via.placeholder.com/300x450/4A1479/D0806A?text=Poster" />
+      <MovieImage src={getImagePath(poster_path)} />
       <MovieContent>
-        <MovieTitle>Blade Runner</MovieTitle>
-        <MovieOverview>Cyberpunk classic</MovieOverview>
+        <MovieTitle>{title}</MovieTitle>
+        <MovieOverview>{overview}</MovieOverview>
       </MovieContent>
     </Wrapper>
   );

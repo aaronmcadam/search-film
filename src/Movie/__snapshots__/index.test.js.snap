@@ -10,29 +10,21 @@ ShallowWrapper {
   "length": 1,
   "node": <styled.div>
     <styled.img
-        src="http://via.placeholder.com/300x450/4A1479/D0806A?text=Poster"
+        src="https://image.tmdb.org/t/p/w300_and_h450_bestv2undefined"
     />
     <styled.div>
-        <styled.h2>
-            Blade Runner
-        </styled.h2>
-        <styled.div>
-            Cyberpunk classic
-        </styled.div>
+        <styled.h2 />
+        <styled.div />
     </styled.div>
 </styled.div>,
   "nodes": Array [
     <styled.div>
       <styled.img
-            src="http://via.placeholder.com/300x450/4A1479/D0806A?text=Poster"
+            src="https://image.tmdb.org/t/p/w300_and_h450_bestv2undefined"
       />
       <styled.div>
-            <styled.h2>
-                  Blade Runner
-            </styled.h2>
-            <styled.div>
-                  Cyberpunk classic
-            </styled.div>
+            <styled.h2 />
+            <styled.div />
       </styled.div>
 </styled.div>,
   ],
@@ -72,29 +64,21 @@ ShallowWrapper {
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <styled.div>
           <styled.img
-                    src="http://via.placeholder.com/300x450/4A1479/D0806A?text=Poster"
+                    src="https://image.tmdb.org/t/p/w300_and_h450_bestv2undefined"
           />
           <styled.div>
-                    <styled.h2>
-                              Blade Runner
-                    </styled.h2>
-                    <styled.div>
-                              Cyberpunk classic
-                    </styled.div>
+                    <styled.h2 />
+                    <styled.div />
           </styled.div>
 </styled.div>,
         "_debugID": 2,
         "_renderedOutput": <styled.div>
           <styled.img
-                    src="http://via.placeholder.com/300x450/4A1479/D0806A?text=Poster"
+                    src="https://image.tmdb.org/t/p/w300_and_h450_bestv2undefined"
           />
           <styled.div>
-                    <styled.h2>
-                              Blade Runner
-                    </styled.h2>
-                    <styled.div>
-                              Cyberpunk classic
-                    </styled.div>
+                    <styled.h2 />
+                    <styled.div />
           </styled.div>
 </styled.div>,
       },

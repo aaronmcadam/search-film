@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Movie from '../Movie';
 
@@ -10,17 +11,24 @@ const Wrapper = styled.div`
 function MovieListing({ movies }) {
   return (
     <Wrapper>
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
+      {movies.map(movie => <Movie key={movie.id} {...movie} />)}
     </Wrapper>
   );
 }
+
+MovieListing.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      poster_path: PropTypes.string,
+      title: PropTypes.string,
+      overview: PropTypes.string,
+    })
+  ),
+};
+
+MovieListing.defaultProps = {
+  movies: [],
+};
 
 export default MovieListing;

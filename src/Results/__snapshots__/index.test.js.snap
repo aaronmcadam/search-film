@@ -14,7 +14,9 @@ ShallowWrapper {
     <styled.h2>
         Results
     </styled.h2>
-    <MovieListing />
+    <MovieListing
+        movies={Array []}
+    />
 </styled.div>,
   "nodes": Array [
     <styled.div
@@ -23,7 +25,9 @@ ShallowWrapper {
       <styled.h2>
             Results
       </styled.h2>
-      <MovieListing />
+      <MovieListing
+            movies={Array []}
+      />
 </styled.div>,
   ],
   "options": Object {},
@@ -66,7 +70,9 @@ ShallowWrapper {
           <styled.h2>
                     Results
           </styled.h2>
-          <MovieListing />
+          <MovieListing
+                    movies={Array []}
+          />
 </styled.div>,
         "_debugID": 2,
         "_renderedOutput": <styled.div
@@ -75,7 +81,9 @@ ShallowWrapper {
           <styled.h2>
                     Results
           </styled.h2>
-          <MovieListing />
+          <MovieListing
+                    movies={Array []}
+          />
 </styled.div>,
       },
       "_renderedNodeType": 1,

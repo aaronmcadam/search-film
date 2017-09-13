@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { injectGlobal } from 'styled-components';
 import { normalize } from 'polished';
+import { requestMovies } from './utils/api';
 import Header from './Header';
 import SearchForm from './SearchForm';
 import Results from './Results';
@@ -23,9 +24,15 @@ injectGlobal`
 const AppWrapper = styled.div``;
 
 class App extends Component {
+  state = {
+    movies: [],
+  };
+
   handleSubmit = event => {
     event.preventDefault();
-    console.log('this.searchInput.value', this.searchInput.value);
+    requestMovies(this.searchInput.value).then(movies =>
+      this.setState({ movies })
+    );
   };
   render() {
     return (
@@ -37,7 +44,7 @@ class App extends Component {
           }}
           onSubmit={this.handleSubmit}
         />
-        <Results />
+        <Results movies={this.state.movies} />
       </AppWrapper>
     );
   }
