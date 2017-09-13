@@ -105,7 +105,7 @@ function MovieListing({ movies }) {
 
 function Results() {
   return (
-    <StyledResults>
+    <StyledResults data-role="results">
       <ResultHeading>Results</ResultHeading>
       <MovieListing />
     </StyledResults>
@@ -120,8 +120,12 @@ class App extends Component {
           <AppName>SearchFilm</AppName>
           <Intro>Start typing to get started!</Intro>
         </Header>
-        <SearchForm>
-          <SearchInput type="text" placeholder="e.g. Blade Runner" />
+        <SearchForm data-role="search-form">
+          <SearchInput
+            data-role="search-input"
+            type="text"
+            placeholder="e.g. Blade Runner"
+          />
           <SubmitButton>Search</SubmitButton>
         </SearchForm>
         <Results />
