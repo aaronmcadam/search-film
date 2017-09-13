@@ -25,19 +25,92 @@ const AppName = styled.h1`font-size: 3rem;`;
 const Intro = styled.p`font-size: 1.5rem;`;
 
 const SearchForm = styled.form`
-  padding-left: 1rem;
   margin-bottom: 2rem;
+  padding-left: 1rem;
 `;
 const SearchInput = styled.input`
-  padding: 10px;
-  font-size: 1.5rem;
   border-radius: 10px;
+  font-size: 1.5rem;
   margin-right: 10px;
+  padding: 10px;
 `;
 const SubmitButton = styled.button`
   font-size: 1.5rem;
   padding: 10px;
 `;
+
+const StyledResults = styled.div`
+  background-color: ${bleuDeFrance};
+  color: ${vistaBlue};
+  padding: 1rem;
+`;
+
+const ResultHeading = styled.h2`
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+`;
+
+const StyledMovieListing = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+const StyledMovie = styled.div`
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  color: #000;
+  margin: 0.5rem 0.5rem 0 0;
+  width: 300px;
+`;
+const MovieImage = styled.img`border-radius: 5px 5px 0 0;`;
+const MovieTitle = styled.h2`
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+`;
+const MovieContent = styled.div`
+  border-radius: 0 0 2px 2px;
+  padding: 1.5rem;
+`;
+const MovieOverview = styled.div``;
+
+function Movie({ poster_path, title, overview }) {
+  return (
+    <StyledMovie>
+      <MovieImage src="http://via.placeholder.com/300x450/4A1479/D0806A?text=Poster" />
+      <MovieContent>
+        <MovieTitle>Blade Runner</MovieTitle>
+        <MovieOverview>Cyberpunk classic</MovieOverview>
+      </MovieContent>
+    </StyledMovie>
+  );
+}
+function MovieListing({ movies }) {
+  return (
+    <StyledMovieListing>
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+    </StyledMovieListing>
+  );
+}
+
+function Results() {
+  return (
+    <StyledResults>
+      <ResultHeading>Results</ResultHeading>
+      <MovieListing />
+    </StyledResults>
+  );
+}
 
 class App extends Component {
   render() {
@@ -51,6 +124,7 @@ class App extends Component {
           <SearchInput type="text" placeholder="e.g. Blade Runner" />
           <SubmitButton>Search</SubmitButton>
         </SearchForm>
+        <Results />
       </AppWrapper>
     );
   }
